@@ -36,9 +36,7 @@
 
             newTask.innerText = task.value;
 
-            newTask.className = 'item';
-
-            newTask.className = 'animate__animated animate__bounceInUp';
+            newTask.className = 'animate__animated animate__bounceInUp item';
 
             taskList.appendChild(newTask);
 
@@ -53,10 +51,10 @@
 
                   setTimeout(() => {
                         taskList.removeChild(item); 
-                  }, "1000")       
+                  }, "500")       
            })          
       }
       });    
-      
+
 </script>
 </html>
