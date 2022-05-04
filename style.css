@@ -1,0 +1,50 @@
+main{
+      background-color: rgb(255, 220, 175);
+      margin: 5% 10%;
+      padding: 4% 10% ;
+}
+ul{
+      list-style:square;
+}
+
+li{
+      font-size: 2rem;
+      border-bottom: 2px dotted black;
+      word-wrap:break-word;
+      
+}
+
+li:hover{
+      color: rgb(194, 0, 0); 
+      cursor: pointer;                 
+}
+
+input{
+      padding: 0.3%;
+      width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+
+      main{
+            background-color: rgb(255, 220, 175);
+            margin: 0% 0%;
+            padding: 4% 10% ;
+      }
+      ul{
+            list-style:square;
+      }
+      
+      li{
+            font-size: 1.2rem;
+            border-bottom: 2px dotted black;
+            word-wrap:break-word;
+            
+      }
+      
+      input{
+            padding: 0.8%;
+            width: 80%;
+      }
+      
+    }
