@@ -6,10 +6,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Checklist</title>
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 <body>
       <main>
-            <h1>Check list</h1>
+            <h1 class="animate__animated animate__bounce" >Check list</h1>
             <br>
             <input type="text" name="" id="text-input">
             <button id="submit">✓</button>
@@ -24,11 +26,6 @@
 
 <script>
 
-
-
-
-      // learned event listener a appendChild method
-
       document.getElementById("submit").addEventListener("click", function(){
             
             let task = document.getElementById("text-input");
@@ -41,6 +38,8 @@
 
             newTask.className = 'item';
 
+            newTask.className = 'animate__animated animate__bounceInUp';
+
             taskList.appendChild(newTask);
 
             task.value = "";
@@ -50,19 +49,14 @@
       {
            item.addEventListener('click',function(){
 
-                  var audio = new Audio('done.mp3');
-                  audio.play();
+                  item.className = "animate__animated animate__backOutLeft";
 
-                  taskList.removeChild(item);    
+                  setTimeout(() => {
+                        taskList.removeChild(item); 
+                  }, "1000")       
            })          
       }
-      });
-
-
-
-
-
-
+      });    
       
 </script>
 </html>
